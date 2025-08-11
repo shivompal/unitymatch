@@ -1,0 +1,29 @@
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.sqlite3
+
+# Pipenv
+Pipfile.lock
+# Virtual envs (Pipenv creates its own folder elsewhere, but just in case)
+.venv/
+
+# Environment variables
+.env
+.env.*
+
+# VSCode / Codespaces
+.vscode/
+.history/
+.DS_Store
+
+# Docker
+docker-data/
