@@ -12,9 +12,9 @@
   <a href="https://github.com/shivompal/unitymatch/stargazers"><img src="https://img.shields.io/github/stars/shivompal/unitymatch" alt="Stars"></a>
   <a href="https://github.com/shivompal/unitymatch/issues"><img src="https://img.shields.io/github/issues/shivompal/unitymatch" alt="Issues"></a>
   <a href="https://github.com/shivompal/unitymatch/blob/main/LICENSE"><img src="https://img.shields.io/github/license/shivompal/unitymatch" alt="License"></a>
-  <img src="https://img.shields.io/badge/Node.js-18.x-green" alt="Node.js">
-  <img src="https://img.shields.io/badge/PostgreSQL-15.x-blue" alt="PostgreSQL">
-  <img src="https://img.shields.io/badge/React-18.x-61DAFB" alt="React">
+  <img src="https://img.shields.io/badge/Node.js-22.x-green" alt="Node.js">
+  <img src="https://img.shields.io/badge/PostgreSQL-17.x-blue" alt="PostgreSQL">
+  <img src="https://img.shields.io/badge/React-19.x-61DAFB" alt="React">
 </p>
 
 ---
