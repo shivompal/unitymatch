@@ -45,21 +45,6 @@ It offers **personalized matchmaking**, **real-time chat**, and **advanced searc
 
 ## 🗂 Repository Structure
 
-unitymatch/
-├── services/ # All backend microservices
-│ ├── auth/ # Authentication service
-│ ├── users/ # User profiles
-│ ├── matchmaking/ # AI matchmaking logic
-│ ├── chat/ # Real-time chat
-│ ├── moderation/ # Content moderation
-│ └── admin/ # Admin dashboard backend
-│
-├── frontend/ # React + Tailwind frontend
-├── docs/ # Documentation & diagrams
-│ └── assets/ # Images (logo, architecture diagram)
-├── scripts/ # DevOps scripts
-└── README.md
-
 ## 🖥️ Architecture Diagram
 
 <p align="center">
