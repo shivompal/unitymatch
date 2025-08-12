@@ -2,7 +2,7 @@
   <img src="docs/assets/unitymatch-logo.png" alt="UnityMatch Logo" width="180" />
 </p>
 
-<h1 align="center">UnityMatch</h1>
+<h1 align="center">UnityMatch Platform</h1>
 
 <p align="center">
   <em>AI-Powered Matrimonial Platform • Scalable • Secure • Real-Time</em>
@@ -39,11 +39,9 @@ It offers **personalized matchmaking**, **real-time chat**, and **advanced searc
 
 ## 🛠 Tech Stack
 
-**Backend:** Node.js + TypeScript • Express.js • PostgreSQL • Redis • Elasticsearch • Socket.IO  
+**Backend:** Python • Django • FastAPI • TypeScript • Express.js • PostgreSQL • Redis • Elasticsearch • Socket.IO  
 **Frontend:** React • Tailwind CSS • Chart.js  
 **Infra & Tools:** Docker • GitHub Codespaces • PostgreSQL Stored Procedures • PDF/Excel Export
-
----
 
 ## 🗂 Repository Structure
 
@@ -85,6 +83,7 @@ Open the repository in GitHub Codespaces – all dependencies will be pre-instal
 bash
 
 docker-compose up --build
+
 4️⃣ Access the Application
 Frontend: http://localhost:3000
 
