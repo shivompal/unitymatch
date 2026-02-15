@@ -62,12 +62,26 @@ class Profile(models.Model):
     manglik = models.BooleanField(default=False)
 
     anonymous_mode_enabled = models.BooleanField(default=False)
+    profile_visibility = models.CharField(max_length=20, default="public")
 
     is_active = models.BooleanField(default=True)
     is_soft_deleted = models.BooleanField(default=False)
+    soft_deleted_at = models.DateTimeField(null=True, blank=True)
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.full_name
+
+    class Meta:
+        ordering = ["-created_at"]
+        indexes = [
+            models.Index(fields=["user"]),
+            models.Index(fields=["gender"]),
+            models.Index(fields=["date_of_birth"]),
+            models.Index(fields=["religion"]),
+            models.Index(fields=["caste"]),
+            models.Index(fields=["country", "state", "city"]),
+            models.Index(fields=["is_active", "is_soft_deleted"]),
+        ]
