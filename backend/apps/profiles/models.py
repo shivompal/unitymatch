@@ -3,6 +3,23 @@ from django.db import models
 from django.conf import settings
 
 
+class GenderChoices(models.TextChoices):
+    MALE = "male", "Male"
+    FEMALE = "female", "Female"
+    OTHER = "other", "Other"
+
+
+class MaritalStatusChoices(models.TextChoices):
+    NEVER_MARRIED = "never_married", "Never Married"
+    DIVORCED = "divorced", "Divorced"
+    WIDOWED = "widowed", "Widowed"
+
+
+class ChildrenStatusChoices(models.TextChoices):
+    NONE = "none", "No Children"
+    HAS_CHILDREN = "has_children", "Has Children"
+
+
 class Profile(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
 
@@ -11,12 +28,17 @@ class Profile(models.Model):
     )
 
     full_name = models.CharField(max_length=255)
-    gender = models.CharField(max_length=20)
+    gender = models.CharField(max_length=20, choices=GenderChoices.choices)
 
     date_of_birth = models.DateField()
 
-    marital_status = models.CharField(max_length=30)
-    children_status = models.CharField(max_length=30)
+    marital_status = models.CharField(
+        max_length=30, choices=MaritalStatusChoices.choices
+    )
+
+    children_status = models.CharField(
+        max_length=30, choices=ChildrenStatusChoices.choices
+    )
 
     religion = models.CharField(max_length=100)
     caste = models.CharField(max_length=100, blank=True)
