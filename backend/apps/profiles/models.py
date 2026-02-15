@@ -85,3 +85,35 @@ class Profile(models.Model):
             models.Index(fields=["country", "state", "city"]),
             models.Index(fields=["is_active", "is_soft_deleted"]),
         ]
+
+
+class PhotoModerationStatus(models.TextChoices):
+    UPLOADED = "uploaded", "Uploaded"
+    UNDER_REVIEW = "under_review", "Under Review"
+    APPROVED = "approved", "Approved"
+    REJECTED = "rejected", "Rejected"
+
+
+class ProfilePhoto(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+
+    profile = models.ForeignKey(
+        Profile, on_delete=models.CASCADE, related_name="photos"
+    )
+
+    image = models.ImageField(upload_to="profile_photos/")
+
+    is_primary = models.BooleanField(default=False)
+
+    moderation_status = models.CharField(
+        max_length=20,
+        choices=PhotoModerationStatus.choices,
+        default=PhotoModerationStatus.UPLOADED,
+    )
+
+    moderation_notes = models.TextField(blank=True)
+
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Photo of {self.profile.full_name}"
