@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "apps.users.apps.UsersConfig",
     "apps.profiles.apps.ProfilesConfig",
+    "apps.interests.apps.InterestsConfig",
 ]
 
 MIDDLEWARE = [

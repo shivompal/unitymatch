@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+
+# Virtual environment
+backend/.venv/
+
+# Django
+backend/media/
+backend/staticfiles/
+
+# VS Code
+.vscode/
+
+# macOS/Linux
+.DS_Store
+Thumbs.db
+
+# Node (future frontend)
+node_modules/
