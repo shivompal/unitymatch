@@ -7,4 +7,4 @@ Tech Stack:
 - Bun (Realtime Chat)
 - PostgreSQL
 - Redis
-- React(TanStack Start)
+- React (TanStack Start)
