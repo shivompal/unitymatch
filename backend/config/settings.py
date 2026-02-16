@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "apps.users.apps.UsersConfig",
     "apps.profiles.apps.ProfilesConfig",
     "apps.interests.apps.InterestsConfig",
+    "apps.matches.apps.MatchesConfig",
 ]
 
 MIDDLEWARE = [
