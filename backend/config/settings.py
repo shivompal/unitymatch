@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "apps.profiles.apps.ProfilesConfig",
     "apps.interests.apps.InterestsConfig",
     "apps.matches.apps.MatchesConfig",
+    "apps.chat.apps.ChatConfig",
 ]
 
 MIDDLEWARE = [
