@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny
@@ -12,4 +12,5 @@ def health_check(request):
 
 urlpatterns = [
     path("health/", health_check),
+    path("auth/", include("apps.users.urls")),
 ]
