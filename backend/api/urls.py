@@ -14,4 +14,5 @@ urlpatterns = [
     path("health/", health_check),
     path("auth/", include("apps.users.urls")),
     path("profiles/", include("apps.profiles.urls")),
+    path("discovery/", include("apps.discovery.urls")),
 ]
