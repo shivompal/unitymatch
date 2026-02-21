@@ -15,4 +15,5 @@ urlpatterns = [
     path("auth/", include("apps.users.urls")),
     path("profiles/", include("apps.profiles.urls")),
     path("discovery/", include("apps.discovery.urls")),
+    path("interests/", include("apps.interests.urls")),
 ]
