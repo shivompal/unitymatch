@@ -5,7 +5,7 @@ from rest_framework.permissions import AllowAny
 
 
 @api_view(["GET"])
-@permission_classes([AllowAny])
+# @permission_classes([AllowAny])
 def health_check(request):
     return Response({"status": "UnityMatch API running"})
 
@@ -14,6 +14,7 @@ urlpatterns = [
     path("health/", health_check),
     path("auth/", include("apps.users.urls")),
     path("profiles/", include("apps.profiles.urls")),
+    path("photos/", include("apps.profiles.photo_urls")),
     path("discovery/", include("apps.discovery.urls")),
     path("interests/", include("apps.interests.urls")),
 ]

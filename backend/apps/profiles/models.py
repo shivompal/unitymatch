@@ -117,3 +117,12 @@ class ProfilePhoto(models.Model):
 
     def __str__(self):
         return f"Photo of {self.profile.full_name}"
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=["profile"],
+                condition=models.Q(is_primary=True),
+                name="unique_primary_photo_per_profile",
+            )
+        ]

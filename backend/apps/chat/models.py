@@ -1,6 +1,7 @@
 import uuid
 from django.db import models
 from apps.matches.models import Match
+from apps.profiles.models import Profile
 
 
 class ChatRoom(models.Model):
@@ -19,9 +20,6 @@ class ChatRoom(models.Model):
 class MessageType(models.TextChoices):
     TEXT = "text", "Text"
     IMAGE = "image", "Image"
-
-
-from apps.profiles.models import Profile
 
 
 class Message(models.Model):

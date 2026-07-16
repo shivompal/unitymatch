@@ -28,6 +28,7 @@ def accept_interest(interest):
             [interest.sender, interest.receiver], key=lambda p: str(p.id)
         )
 
+        # match, created = Match.objects.get_or_create(
         match, _ = Match.objects.get_or_create(profile1=profile1, profile2=profile2)
 
         create_chat_room_for_match(match)
