@@ -4,9 +4,7 @@
 **Status:** Active  
 **Last Updated:** July 2026
 
-**Owner:** Shiv Om Pal
-
-**Architectural Guide:** ChatGPT
+**Owner:** UnityMatch Engineering
 
 **Applies To:** `backend/`
 
